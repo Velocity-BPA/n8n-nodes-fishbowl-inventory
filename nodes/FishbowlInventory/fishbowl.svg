@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <!-- Fishbowl -->
+  <ellipse cx="30" cy="32" rx="22" ry="20" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <!-- Water -->
+  <ellipse cx="30" cy="35" rx="18" ry="14" fill="#64B5F6" opacity="0.6"/>
+  <!-- Fish body -->
+  <path d="M22 32 Q30 26 38 32 Q30 38 22 32" fill="#FF7043" stroke="#E64A19" stroke-width="1"/>
+  <!-- Fish tail -->
+  <path d="M22 32 L16 26 L16 38 Z" fill="#FF7043" stroke="#E64A19" stroke-width="1"/>
+  <!-- Fish eye -->
+  <circle cx="34" cy="31" r="2" fill="white"/>
+  <circle cx="35" cy="31" r="1" fill="#333"/>
+  <!-- Bubbles -->
+  <circle cx="40" cy="26" r="2" fill="#BBDEFB" opacity="0.8"/>
+  <circle cx="44" cy="22" r="1.5" fill="#BBDEFB" opacity="0.6"/>
+  <circle cx="38" cy="20" r="1" fill="#BBDEFB" opacity="0.5"/>
+  <!-- Bowl rim -->
+  <ellipse cx="30" cy="14" rx="16" ry="4" fill="none" stroke="#1565C0" stroke-width="2"/>
+  <!-- Bowl base -->
+  <ellipse cx="30" cy="52" rx="10" ry="3" fill="#1565C0" opacity="0.3"/>
+</svg>
