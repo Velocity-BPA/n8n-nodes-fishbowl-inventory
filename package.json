@@ -1,38 +1,32 @@
 {
-  "name": "n8n-nodes-fishbowl-inventory",
+  "name": "@velocity-bpa/n8n-nodes-fishbowl-inventory",
   "version": "1.0.0",
-  "description": "A comprehensive n8n community node for Fishbowl Inventory providing 12 resources and 60+ operations for warehouse and manufacturing inventory management automation.",
-  "license": "BUSL-1.1",
+  "description": "n8n community node for Fishbowl Inventory integration",
+  "license": "bsl-catalog",
+  "homepage": "https://n8n.io",
   "author": {
     "name": "Velocity BPA",
-    "email": "licensing@velobpa.com",
-    "url": "https://velobpa.com"
+    "email": "support@velocitybpa.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Velocity-BPA/n8n-nodes-fishbowl-inventory.git"
+    "url": "https://github.com/velocity-bpa/n8n-nodes-fishbowl-inventory.git"
   },
-  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-fishbowl-inventory#readme",
-  "bugs": {
-    "url": "https://github.com/Velocity-BPA/n8n-nodes-fishbowl-inventory/issues"
+  "engines": {
+    "node": ">=18.0.0"
   },
-  "keywords": [
-    "n8n",
-    "n8n-community-node-package",
-    "fishbowl",
-    "fishbowl-inventory",
-    "inventory-management",
-    "warehouse-management",
-    "manufacturing",
-    "quickbooks",
-    "erp",
-    "wms",
-    "supply-chain",
-    "automation"
-  ],
-  "main": "dist/nodes/FishbowlInventory/FishbowlInventory.node.js",
+  "packageManager": "pnpm@9.1.4",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build"
+  },
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
@@ -40,41 +34,24 @@
       "dist/credentials/FishbowlInventoryApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/FishbowlInventory/FishbowlInventory.node.js",
-      "dist/nodes/FishbowlInventory/FishbowlInventoryTrigger.node.js"
+      "dist/nodes/FishbowlInventory/FishbowlInventory.node.js"
     ]
   },
-  "scripts": {
-    "build": "tsc && gulp build:icons",
-    "dev": "tsc --watch",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "format": "prettier --write \"**/*.ts\"",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch",
-    "prepublishOnly": "npm run build",
-    "clean": "rm -rf dist"
-  },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.15.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@types/node": "^20.14.8",
     "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "gulp": "^4.0.2",
-    "jest": "^29.7.0",
     "n8n-workflow": "*",
-    "prettier": "^3.2.4",
-    "ts-jest": "^29.1.2",
-    "typescript": "^5.3.3"
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "dependencies": {
+    "axios": "^1.7.2"
   }
 }
